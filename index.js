@@ -211,7 +211,7 @@ function initMap(lat, lon, mapContainer) {
         container: mapContainer, // container id
         style: 'mapbox://styles/mapbox/streets-v8', //stylesheet location
         center: [lon, lat], // starting position
-        zoom: 12 // starting zoom
+        zoom: 16 // starting zoom
     });
 
     var mapillarySource = {
