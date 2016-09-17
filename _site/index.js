@@ -211,13 +211,13 @@ function initMap(lat, lon, mapContainer) {
         container: mapContainer, // container id
         style: 'mapbox://styles/mapbox/streets-v8', //stylesheet location
         center: [lon, lat], // starting position
-        zoom: 12 // starting zoom
+        zoom: 16 // starting zoom
     });
 
     var mapillarySource = {
         type: 'vector',
         tiles: ['https://d2munx5tg0hw47.cloudfront.net/tiles/{z}/{x}/{y}.mapbox'],
-        minzoom: 0,
+        minzoom: 16,
         maxzoom: 16
     };
 
@@ -460,7 +460,7 @@ function initViewerMapBlock(el, startNode) {
             }
         })
         rightMap.getSource('markers').setData(tempSource._data)
-        rightMap.flyTo({
+        rightMap.jumpTo({
             center: lnglat,
             zoom: 16,
             speed: 1.7

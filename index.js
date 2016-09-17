@@ -460,7 +460,7 @@ function initViewerMapBlock(el, startNode) {
             }
         })
         rightMap.getSource('markers').setData(tempSource._data)
-        rightMap.flyTo({
+        rightMap.jumpTo({
             center: lnglat,
             zoom: 16,
             speed: 1.7
